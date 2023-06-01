@@ -28,7 +28,9 @@ jobs:
         distribution: 'temurin'
         cache: maven
     - name: Build with Maven
-      run: mvn package dockerfile:push --file Test/pom.xml
+      run: mvn clean install
+  
+#           tags: thearaseng/dockerized-spring-boot-app:${{ env.DATE }}
 #       env: 
 #           MAVEN_USERNAME: rgavhle
 #           MAVEN_PASSWORD: First#1234
