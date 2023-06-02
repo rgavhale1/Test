@@ -6,4 +6,4 @@ ENV SERVER_PORT=8080
 COPY app/target/Test*.jar /Test.jar
 
 EXPOSE 8080
-ENTRYPOINT ["java","-jar","/Test.jar"]
+ENTRYPOINT ["java", "-jar", "/Test.jar"]
