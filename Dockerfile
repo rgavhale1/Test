@@ -4,7 +4,7 @@ FROM openjdk:17-jdk-slim
 ENV SERVER_PORT=8080
 WORKDIR /app
 
-COPY home/runner/work/Test/Test/target/test.jar /app
+ADD home/runner/work/Test/Test/target/test.jar /app
 
 EXPOSE 8080
 ENTRYPOINT ["java", "-jar", "test.jar"]
