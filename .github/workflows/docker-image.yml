@@ -24,6 +24,6 @@ jobs:
     - name: Build Docker Image
       run: docker build -t testing .
 
-    - name: Copy Test*.jar into Container
+    - name: Copy Test-0.0.1-SNAPSHOT.jar into Container
       run: docker cp home/runner/work/Test/Test/target/Test-0.0.1-SNAPSHOT.jar testcontaineer:/Test-0.0.1-SNAPSHOT.jar
 
