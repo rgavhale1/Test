@@ -7,8 +7,8 @@ on:
     branches: [ "master" ]
 
 env:
-  DOCKER_USERNAME: rgavhale
-  DOCKER_PASSWORD: First#1234
+  DOCKER_USERNAME: ${{ secrets.DOCKER_USERNAME }}
+  DOCKER_PASSWORD: ${{ secrets.DOCKER_PASSWORD }}
 
 jobs:
   build:
@@ -30,7 +30,7 @@ jobs:
       run: docker build -t rgavhale/test:latest .
       
     - name: Log in to Docker Hub
-      run: docker login -u rgavhale -p First#1234
+      run: docker login -u $DOCKER_USERNAME -p DOCKER_PASSWORD
 
     - name: Push Docker Image
       run: docker push rgavhale/test:latest
