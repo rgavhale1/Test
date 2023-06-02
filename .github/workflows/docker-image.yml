@@ -22,8 +22,8 @@ jobs:
       uses: actions/checkout@v2
 
     - name: Build Docker Image
-      run: docker build -t your-image-name .
+      run: docker build -t testing .
 
     - name: Copy Test*.jar into Container
-      run: docker cp app/target/Test*.jar your-container-name:/Test.jar
+      run: docker cp app/target/Test*.jar testcontainer:/Test.jar
 
