@@ -79,7 +79,7 @@ jobs:
           gcloud container clusters get-credentials $GKE_CLUSTER \
           --zone $GKE_ZONE \
           --project $PROJECT_ID
-          helm upgrade testgke helm-chart
+          helm upgrade $GKE_CLUSTER helm-chart
           kubectl rollout status deployment/$DEPLOYMENT_NAME
           kubectl get services -o wide
         #          test
