@@ -75,6 +75,7 @@ jobs:
             #        Deploy the Docker image to the GKE cluster
       - name: Deploy Image to GKE cluster
         run: |
+          gcloud components install gke-gcloud-auth-plugin
           gcloud container clusters get-credentials $GKE_CLUSTER \
           --zone $GKE_ZONE \
           --project $PROJECT_ID
