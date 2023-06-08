@@ -40,7 +40,7 @@ service:
   type: LoadBalancer
   port: 8080
   targetPort: 8080
-  name: TestService
+  name: testservice
 
 ingress:
   enabled: false
@@ -84,4 +84,4 @@ tolerations: [ ]
 affinity: { }
 
 container:
-  name: TestContainerName
+  name: testcontainername
